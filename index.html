@@ -4,381 +4,303 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Know your Health</title>
-    <script src="//code.tidio.co/owzv4epi92kfufbm3brwgw6l89jxh4zy.js" async></script>
+    <title>Know Your Health</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Petit+Formal+Script&family=Quantico:ital,wght@0,700;1,700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="KYH.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Oswald:wght@700&display=swap"
-        rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet" />
     <style>
         body {
-            background: url('https://github.com/GangadharPrathap/FSD-class-codes/blob/main/vecteezy_geometric-hexagon-vector-white-background-technology-wallpaper_24221162.jpg?raw=true');
-            background-size: contain;
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        .header-container {
+            background: linear-gradient(90deg, #1f2937, #374151, #1f2937);
+        }
+
+        .nav-link:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-card {
+            background-image: url('https://img.freepik.com/premium-vector/line-matrix-code-data-code-screen_313905-846.jpg');
+            background-size: cover;
             background-position: center;
         }
     </style>
 </head>
 
-<body>
-    <!--HEAD SECTION-->
-    <header>
-        <div class="header-container">
-            <h2>KYH</h2>
-            <marquee width="200px">
-                <h1>Know Your Health</h1>
-            </marquee>
-            <div class="LogReg">
-                <h1><a href="login page.html" style="text-decoration: none;">Login</a></h1>
+<body class="bg-gray-100">
+
+    <!-- Header Section -->
+    <header class="fixed top-0 left-0 w-full z-50 shadow-lg header-container">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <h1 class="text-white text-3xl font-bold rounded-full bg-red-500 w-24 h-24 flex items-center justify-center shadow-md">KYH</h1>
+            <h2 class="text-white text-3xl font-bold flex-grow text-center">Know Your Health</h2>
+            <div class="hidden sm:block">
+                <a href="#contact" class="px-6 py-3 bg-white text-teal-600 font-semibold rounded-full shadow-lg hover:bg-teal-600 hover:text-white transition-all duration-300">Login</a>
             </div>
         </div>
+        <nav class="bg-white shadow-md py-3 mt-0 flex justify-center">
+            <a href="#home" class="nav-link text-teal-600 font-semibold text-lg mx-4 transition-all duration-200 flex items-center gap-2">
+                <i class="ri-home-line"></i>Home
+            </a>
+            <a href="#info" class="nav-link text-teal-600 font-semibold text-lg mx-4 transition-all duration-200 flex items-center gap-2">
+                <i class="ri-information-line"></i>Information
+            </a>
+            <a href="#schedule" class="nav-link text-teal-600 font-semibold text-lg mx-4 transition-all duration-200 flex items-center gap-2">
+                <i class="ri-calendar-line"></i>Schedule Booking
+            </a>
+            <a href="#about" class="nav-link text-teal-600 font-semibold text-lg mx-4 transition-all duration-200 flex items-center gap-2">
+                <i class="ri-group-line"></i>About Us
+            </a>
+            <a href="#contact" class="nav-link text-teal-600 font-semibold text-lg mx-4 transition-all duration-200 flex items-center gap-2">
+                <i class="ri-contacts-line"></i>Contact
+            </a>
+        </nav>
     </header>
-    <section>
-        <div class="navigation-links">
-            <nav>
-                <a href="#"><img src="https://github.com/GangadharPrathap/medical_webiste/blob/main/home.jpg?raw=true" width="20px" />&nbsp;Home</a>
-                <a href="#Info"><img src="https://github.com/GangadharPrathap/medical_webiste/blob/main/information.jpg?raw=true" width="20px" />&nbsp;Information</a>
-                <a href="#Sc"><img src="https://github.com/GangadharPrathap/medical_webiste/blob/main/calender.jpg?raw=true" width="20px" />&nbsp;Schedule Booking</a>
-                <a href="#about"><img src="https://github.com/GangadharPrathap/medical_webiste/blob/main/globe.jpg?raw=true" width="20px" />&nbsp;About Us</a>
-                <a href="#Contact"><img src="https://github.com/GangadharPrathap/medical_webiste/blob/main/contact.jpg?raw=true" width="20px" />&nbsp;Contact</a>
-            </nav>
+
+    <!-- Home Section with Side-by-Side Layout -->
+    <section id="home" class="min-h-screen pt-40 flex flex-col lg:flex-row items-center justify-center p-4 bg-gradient-to-br from-blue-100 via-white to-green-100">
+        <!-- Text container -->
+        <div class="flex-1 lg:flex-[3] text-center lg:text-left p-4 md:p-8">
+            <h1 class="text-blue-800 text-5xl sm:text-7xl lg:text-8xl font-bold italic leading-tight mb-4">Know Your Symptoms<br>Take Control of Your Health</h1>
+            <p class="text-green-800 text-2xl sm:text-3xl lg:text-4xl mt-4">Your Health, Your Knowledge, Your Power</p>
+        </div>
+        <!-- Image container -->
+        <div class="flex-1 lg:flex-[2] p-4 md:p-8">
+            <img src="https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg" alt="Image of a doctor" class="w-full h-auto rounded-lg shadow-lg transition-transform duration-500 hover:scale-105">
         </div>
     </section>
-    <div class="header-image-container">
-        <h1>Know Your Symtoms<br />Take Control Of Your Health</h1>
-        <h1>Y</h1>
-        <h3>our Health</h3>
-        <h3>our Knowledge</h3>
-        <h3> our Power</h3>
-        <img src="https://github.com/GangadharPrathap/medical_webiste/blob/main/waiting%20hall.jpg?raw=true" alt="ImageError" />
-        <img src="https://github.com/GangadharPrathap/medical_webiste/blob/main/docss%20(2).png?raw=true" alt="ImageError" />
-    </div>
 
 
-    <!--INFORMATION SECTION-->
-
-
-    <div class="etblock" id="Info"></div>
-    <div class="container">
-        <h1 class="megas">INFORMATION</h1>
-        <div class="separator"></div>
-        <div class="info-card">
-            <img src="https://images.cdn-files-a.com/ready_uploads/media/4254219/400_5e709b2fcbc3f.jpg"
-                alt="Medicinal Info" class="info-image">
-            <div class="info-content">
-                <h2>MEDICINAL INFO</h2><br>
-                <span class="info-date">12/4/2025</span><br>
-                <p class="para">Easily search for any medicine to learn about its purpose, dosage, side effects, and the
-                    conditions it's used to treat. Our database is regularly updated with verified medical data from
-                    reliable sources.</p>
+    <!-- Information Section -->
+    <section id="info" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-bold text-center text-blue-800 mb-10">INFORMATION</h1>
+            <!-- Card 1: Image on Left -->
+            <div class="info-card bg-gray-50 rounded-lg shadow-lg flex flex-col md:flex-row items-center p-6 mb-8 transition-transform duration-300 hover:scale-105">
+                <img src="https://images.cdn-files-a.com/ready_uploads/media/4254219/400_5e709b2fcbc3f.jpg" alt="Medicinal Info" class="w-full md:w-1/3 h-auto object-cover rounded-lg mb-4 md:mb-0 md:mr-6">
+                <div class="flex-1">
+                    <h2 class="text-4xl font-bold text-teal-600 mb-2">MEDICINAL INFO</h2>
+                    <span class="text-gray-500 text-sm">12/4/2025</span>
+                    <p class="text-lg mt-4 text-gray-700">Easily search for any medicine to learn about its purpose, dosage, side effects, and the conditions it's used to treat. Our database is regularly updated with verified medical data from reliable sources.</p>
+                    <a href="https://medlineplus.gov/druginformation.html" class="inline-block mt-4 px-6 py-3 bg-teal-600 text-white font-semibold rounded-full hover:bg-purple-800 transition-colors duration-300">READ MORE</a>
+                </div>
             </div>
-            <div class="lol">
-                <a href="https://medlineplus.gov/druginformation.html" class="read-more">READ MORE</a>
+            <!-- Card 2: Image on Right -->
+            <div class="info-card bg-gray-50 rounded-lg shadow-lg flex flex-col md:flex-row-reverse items-center p-6 mb-8 transition-transform duration-300 hover:scale-105">
+                <img src="https://images.cdn-files-a.com/ready_uploads/media/3614206/400_5e2a00e4391e8.jpg" alt="Disease Info" class="w-full md:w-1/3 h-auto object-cover rounded-lg mb-4 md:mb-0 md:ml-6">
+                <div class="flex-1">
+                    <h2 class="text-4xl font-bold text-teal-600 mb-2">DISEASE INFO</h2>
+                    <span class="text-gray-500 text-sm">12/4/2025</span>
+                    <p class="text-lg mt-4 text-gray-700">Use this search to explore detailed information about diseases, from common illnesses to rare disorders. Find symptoms, causes, and treatment options—all in one place.</p>
+                    <a href="https://www.mayoclinic.org/diseases-conditions" class="inline-block mt-4 px-6 py-3 bg-teal-600 text-white font-semibold rounded-full hover:bg-purple-800 transition-colors duration-300">READ MORE</a>
+                </div>
             </div>
         </div>
-        <hr>
-        <div class="info-card">
-            <img src="https://images.cdn-files-a.com/ready_uploads/media/3614206/400_5e2a00e4391e8.jpg"
-                alt="Disease Info" class="info-image">
-            <div class="info-content">
-                <h2>DISEASE INFO</h2><br>
-                <span class="info-date">12/4/2025</span><br>
-                <p class="para">Use this search to explore detailed information about diseases, from common illnesses to
-                    rare disorders. Find symptoms, causes, and treatment options—all in one place.</p>
-            </div>
-            <div class="lol">
-                <a href="https://www.mayoclinic.org/diseases-conditions" class="read-more">READ MORE</a>
-            </div>
-        </div>
-    </div>
+    </section>
 
-    <!-- EXTRA MATTER PART -->
-    <section class="features">
-        <div class="grid">
-            <div class="card">
-                <h3>🔍 Smart Search System</h3>
-                <ul class="list">
-                    <li>Helps users search for medicines, diseases, or symptoms instantly.</li>
-                    <li>Supports keyword auto-suggestions and filters.</li>
-                    <li>Shows quick previews for faster selection.</li>
-                    <li>Designed with a simple, beginner-friendly interface.</li>
-                    <li>Works well on mobile and desktop browsers.</li>
-                    <li>Displays relevant results with a clean layout.</li>
-                    <li>Reduces the time needed to find accurate information.</li>
-                </ul>
-
-            </div>
-            <div class="card">
-                <h3>📱 Mobile-Friendly Design</h3>
-                <ul class="list">
-                    <ul class="list">
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+                        <i class="ri-search-line text-3xl"></i>Smart Search System
+                    </h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Helps users search for medicines, diseases, or symptoms instantly.</li>
+                        <li>Supports keyword auto-suggestions and filters.</li>
+                        <li>Shows quick previews for faster selection.</li>
+                        <li>Designed with a simple, beginner-friendly interface.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+                        <i class="ri-phone-line text-3xl"></i>Mobile-Friendly Design
+                    </h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
                         <li>Fully responsive layout for phones, tablets, and desktops.</li>
                         <li>Touch-optimized elements for smoother use.</li>
                         <li>Clear typography and button sizes for readability.</li>
                         <li>Grid-based layout that adapts to screen size.</li>
-                        <li>Consistent performance across platforms.</li>
-                        <li>No need for app downloads—just use the browser.</li>
-                        <li>Ensures accessibility even in low-data areas.</li>
                     </ul>
-            </div>
-            <div class="card">
-                <h3>🧾 Comprehensive Medical Info</h3>
-                <ul class="list">
-                    <li>Provides details on thousands of medicines.</li>
-                    <li>Includes purpose, dosage, and side effects.</li>
-                    <li>Specifies suitable age group and usage frequency.</li>
-                    <li>Contains links to external trusted resources.</li>
-                    <li>Includes drug interactions and warnings.</li>
-                    <li>Organized alphabetically for easier browsing.</li>
-                    <li>Continuously updated based on verified sources.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>🌐 Multilingual Support</h3>
-                <ul class="list">
-                    <li>Supports regional Indian languages like Hindi, Telugu, Tamil, etc.</li>
-                    <li>Enables wider reach in rural areas.</li>
-                    <li>Simplified translations for ease of understanding.</li>
-                    <li>Helps break language barriers in health education.</li>
-                    <li>Allows users to switch language anytime.</li>
-                    <li>All medical content carefully translated by native speakers.</li>
-                    <li>Boosts inclusivity for non-English speakers.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>🧠 Clean & Modern UI</h3>
-                <ul class="list">
-                    <li>Minimalist design focused on user clarity.</li>
-                    <li>Visually structured using cards and blocks.</li>
-                    <li>Neutral color palette for a calm reading experience.</li>
-                    <li>Easy navigation through categorized menus.</li>
-                    <li>Search and info pages without clutter.</li>
-                    <li>Helpful icons and tooltips for better guidance.</li>
-                    <li>Designed keeping all age groups in mind.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>📚 Updated Medical Data</h3>,<ul class="list">
-                    <li>Minimalist design focused on user clarity.</li>
-                    <li>Visually structured using cards and blocks.</li>
-                    <li>Neutral color palette for a calm reading experience.</li>
-                    <li>Easy navigation through categorized menus.</li>
-                    <li>Search and info pages without clutter.</li>
-                    <li>Helpful icons and tooltips for better guidance.</li>
-                    <li>Designed keeping all age groups in mind.</li>
-                </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center gap-2">
+                        <i class="ri-file-text-line text-3xl"></i>Comprehensive Medical Info
+                    </h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Provides details on thousands of medicines.</li>
+                        <li>Includes purpose, dosage, and side effects.</li>
+                        <li>Specifies suitable age group and usage frequency.</li>
+                        <li>Contains links to external trusted resources.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
-    <!--BOOKING SECTION-->
-    <div class="etblock" id="Sc"></div>
-    <section class="booking-section">
-        <h1 class="mega">SCHEDULE BOOKING</h1>
-        <hr class="booking-line" />
-        <div class="booking-content">
-            <div class="booking-info">
-                <h2 class="booking-subheading">Consult an experienced doctor</h2>
-                <hr />
-                <div class="booking-details">
-                    <img src="https://github.com/GangadharPrathap/medical_webiste/blob/main/doc.jpg?raw=true" alt="Doctor" class="booking-doctor-img" />
-                    <div class="booking-text">
-                        <p><strong>Category:</strong> Health care</p>
-                        <p><strong>Duration:</strong> 02:30 Hours</p>
-                        <p><strong>Location:</strong> Online / offline</p>
-                        <p><strong>Link Price:</strong> ₹100</p>
+
+    <!-- Schedule Booking Section -->
+    <section id="schedule" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-bold text-center text-blue-800 mb-10">SCHEDULE BOOKING</h1>
+            <div class="flex flex-col lg:flex-row items-center justify-center lg:gap-16">
+                <div class="flex-1 max-w-lg mb-8 lg:mb-0">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Consult an experienced doctor</h2>
+                    <img src="https://images.pexels.com/photos/12955896/pexels-photo-12955896.jpeg" alt="Doctor" class="rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105">
+                    <div class="mt-4 text-gray-700">
+                        <p class="font-semibold text-lg mb-2">Category: Health care</p>
+                        <p class="font-semibold text-lg mb-2">Duration: 02:30 Hours</p>
+                        <p class="font-semibold text-lg mb-2">Location: Online / offline</p>
+                        <p class="font-semibold text-lg mb-2">Price: ₹100</p>
+                    </div>
+                </div>
+
+                <div class="flex-1 max-w-lg bg-gray-50 rounded-3xl shadow-xl p-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Book an Appointment</h2>
+                    <form action="YOUR_SUBMISSION_URL" method="post" class="space-y-4">
+                        <div>
+                            <label for="location" class="block font-semibold text-lg mb-1">Choose Location</label>
+                            <select id="location" name="location" required class="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-500 transition-colors duration-200">
+                                <option>Online</option>
+                                <option>Offline</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="time" class="block font-semibold text-lg mb-1">Choose Time</label>
+                            <select id="time" name="time" required class="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-500 transition-colors duration-200">
+                                <option>10:00 AM</option>
+                                <option>10:30 AM</option>
+                                <option>11:00 AM</option>
+                                <option>11:30 AM</option>
+                                <option>12:00 PM</option>
+                                <option>1:00 PM</option>
+                                <option>1:30 PM</option>
+                                <option>2:00 PM</option>
+                                <option>2:30 PM</option>
+                                <option>3:00 PM</option>
+                                <option>3:30 PM</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="date" class="block font-semibold text-lg mb-1">Choose Date</label>
+                            <input type="date" id="date" name="date" required class="w-full px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-500 transition-colors duration-200">
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-teal-500 text-white font-semibold rounded-full hover:bg-teal-600 transition-colors duration-300">Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold text-blue-800 mb-10">DEVELOPERS (CODECURES)</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Developer 1 -->
+                <div class="profile-card bg-white rounded-lg shadow-xl p-6 transition-transform duration-300 hover:scale-105">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D35AQH_lhnQSJk5tQ/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1738496550223?e=1759237200&v=beta&t=fdPLJFeAR2hWAYgy0bqcLfMn7i3B_5ftb3bLiW7_Xuw" alt="Prathap" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-red-500">
+                    <h3 class="text-xl font-bold mb-2">D S S G Prathap</h3>
+                    <p class="text-gray-600">Age: 19</p>
+                    <p class="text-gray-600">Batch: FSD with React Native-1</p>
+                    <div class="flex justify-center gap-4 mt-4">
+                        <a href="https://github.com/GangadharPrathap" class="text-gray-600 hover:text-red-500 transition-colors duration-200">
+                            <i class="ri-github-fill text-2xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sri-satya-gangadhara-prathap-dudala-a6a556349/" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                            <i class="ri-linkedin-fill text-2xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/23prathap09/" class="text-gray-600 hover:text-pink-600 transition-colors duration-200">
+                            <i class="ri-instagram-fill text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Developer 2 -->
+                <div class="profile-card bg-white rounded-lg shadow-xl p-6 transition-transform duration-300 hover:scale-105">
+                    <img src="https://media.licdn.com/dms/image/v2/D5603AQHUqAfrrEMhzg/profile-displayphoto-shrink_400_400/B56ZaJuBNnHAAg-/0/1746067266322?e=1761782400&v=beta&t=20KdmYEUuLk7XjF6ZpEjhOzbMnafIYOFLPau3HpuU5U" alt="Pranoy Raj" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-red-500">
+                    <h3 class="text-xl font-bold mb-2">B.Pranoy.Raj</h3>
+                    <p class="text-gray-600">Age: 19</p>
+                    <p class="text-gray-600">Batch: FSD with React Native-1</p>
+                    <div class="flex justify-center gap-4 mt-4">
+                        <a href="https://github.com/BollareddyPranoyRaj" class="text-gray-600 hover:text-red-500 transition-colors duration-200">
+                            <i class="ri-github-fill text-2xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pranoy-raj-bollareddy-8b62b6279/" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                            <i class="ri-linkedin-fill text-2xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/bollareddy_pranoy_raj/" class="text-gray-600 hover:text-pink-600 transition-colors duration-200">
+                            <i class="ri-instagram-fill text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Developer 3 -->
+                <div class="profile-card bg-white rounded-lg shadow-xl p-6 transition-transform duration-300 hover:scale-105">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQGu_7VGrB2p2g/profile-displayphoto-scale_400_400/B4DZlbccmNJEAg-/0/1758175816848?e=1761782400&v=beta&t=DBrJYN3d14gYgJ-r1GCpvyfT24y2_tUWxLn14vykZ4k" alt="Sudheer" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-red-500">
+                    <h3 class="text-xl font-bold mb-2">Sudheer Immidisetti</h3>
+                    <p class="text-gray-600">Age: 19</p>
+                    <p class="text-gray-600">Batch: FSD with React Native-1</p>
+                    <div class="flex justify-center gap-4 mt-4">
+                        <a href="https://github.com/sudheerimmidisetti" class="text-gray-600 hover:text-red-500 transition-colors duration-200">
+                            <i class="ri-github-fill text-2xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sudheer-immidisetti-619323291" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                            <i class="ri-linkedin-fill text-2xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sudheerimmidisetti/" class="text-gray-600 hover:text-pink-600 transition-colors duration-200">
+                            <i class="ri-instagram-fill text-2xl"></i>
+                        </a>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="booking-form-wrapper">
-                <form action="YOUR_SUBMISSION_URL" method="post">
-                    <label for="time" class="form-label">Choose Location</label>
-                    <select id="time" name="time" required class="form-select">
-                        <option>Online</option>
-                        <option>Offline</option>
-                    </select>
-                    <label for="time" class="form-label">Choose Time</label>
-                    <select id="time" name="time" required class="form-select">
-                        <option></option>
-                        <option>10:00 AM</option>
-                        <option>10:30 AM</option>
-                        <option>11:00 AM</option>
-                        <option>11:30 AM</option>
-                        <option>12:00 PM</option>
-                        <option>1:00 PM</option>
-                        <option>1:30 PM</option>
-                        <option>2:00 PM</option>
-                        <option>2:30 PM</option>
-                        <option>3:00 PM</option>
-                        <option>3:30 PM</option>
-                    </select>
-                    <label for="date" class="form-label">Choose Date</label>
-                    <input type="date" id="date" name="date" min="2025-03-08" required class="form-input2" />
-                    <button class="booking-submit-btn"><a href="TET.html" style="text-decoration: none;">Book
-                            Appointment</a></button>
-                </form>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold text-teal-600 mb-4">Contact Us</h1>
+            <p class="text-lg text-gray-700 mb-10">Have a question? Ready to get started? We’d love to hear from you.</p>
+            <div class="flex flex-col lg:flex-row rounded-xl shadow-2xl overflow-hidden">
+                <div class="flex-1 p-8 bg-gradient-to-br from-teal-200 to-sky-200 text-gray-800 transition-transform duration-300 hover:scale-105">
+                    <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+                    <ul class="space-y-4 text-left">
+                        <li class="flex items-center gap-2"><i class="ri-map-pin-line text-2xl text-teal-600"></i><span class="text-lg">Surampalem, AP, India</span></li>
+                        <li class="flex items-center gap-2"><i class="ri-phone-line text-2xl text-teal-600"></i><span class="text-lg">+91 81790 98495</span></li>
+                        <li class="flex items-center gap-2"><i class="ri-mail-line text-2xl text-teal-600"></i><span class="text-lg">Contact@codecures.in</span></li>
+                        <li class="flex items-center gap-2"><i class="ri-time-line text-2xl text-teal-600"></i><span class="text-lg">Mon - Sat: 9:00 AM to 6:00 PM</span></li>
+                    </ul>
+                </div>
+                <div class="flex-1 p-8 bg-white transition-transform duration-300 hover:scale-105">
+                    <h2 class="text-3xl font-bold text-teal-600 mb-6">Send Us a Message</h2>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                        <input type="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                        <textarea rows="5" placeholder="Your Message" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
+                        <button type="submit" class="w-full py-3 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 transition-colors duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-8 rounded-xl overflow-hidden shadow-xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d88372.95799084926!2d83.26889309351348!3d17.733415378206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1snearest%20hospital%20kkd!5e1!3m2!1sen!2sin!4v1749237718869!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
 
-
-
-
-    <!--ABOUT US-->
-
-
-    <div class="etblock" id="about"></div>
-
-    <div class="main">
-        <h1 class="mega">DEVELOPERS (CODECURES)</h1>
-        <div class="container">
-            <div class="profile">
-                <div class="circle">1</div>
-                <img src="https://github.com/GangadharPrathap/medical_webiste/blob/main/mine.jpg?raw=true"
-                    alt="Prathap">
-                <ul class="mine">
-                    <li>Name: D S S G Prathap</li>
-                    <li>Age: 19</li>
-                    <li>Batch: FSD with React Native-1</li>
-                    <li>Address: Surampalem</li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://github.com/GangadharPrathap"><i class="ri-github-fill"></i></a>
-                    <a href="https://www.linkedin.com/in/sri-satya-gangadhara-prathap-dudala-a6a556349/"><i
-                            class="ri-linkedin-fill"></i></a>
-                    <a href="https://www.instagram.com/23prathap09/"><i class="ri-instagram-fill"></i></a>
-                </div>
-            </div>
-            <div class="profile">
-                <div class="circle">2</div>
-                <img src="https://github.com/GangadharPrathap/medical_webiste/blob/main/pranoy.jpg?raw=true"
-                    alt="Ganesh">
-                <ul class="mine">
-                    <li>Name: B.Pranoy.Raj</li>
-                    <li>Age: 19</li>
-                    <li>Batch: FSD with React Native-1</li>
-                    <li>Address: Surampalem</li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://github.com/BollareddyPranoyRaj"><i class="ri-github-fill"></i></a>
-                    <a href="https://www.linkedin.com/in/pranoy-raj-bollareddy-8b62b6279/"><i
-                            class="ri-linkedin-fill"></i></a>
-                    <a href="https://www.instagram.com/bollareddy_pranoy_raj/"><i class="ri-instagram-fill"></i></a>
-                </div>
-            </div>
-            <div class="profile">
-                <div class="circle">3</div>
-                <img src="https://github.com/GangadharPrathap/medical_webiste/blob/main/sudheer.jpg?raw=true"
-                    alt="Nikhil Prince">
-                <ul class="mine">
-                    <li>Name: Sudheer</li>
-                    <li>Age: 19</li>
-                    <li>Batch: FSD with React Native-1</li>
-                    <li>Address: Surampalem</li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://github.com/sudheerimmidisetti"><i class="ri-github-fill"></i></a>
-                    <a href="https://www.linkedin.com/in/sudheer-immidisetti-619323291"><i
-                            class="ri-linkedin-fill"></i></a>
-                    <a href="https://www.instagram.com/sudheerimmidisetti/"><i class="ri-instagram-fill"></i></a>
-                </div>
-            </div>
-            <div class="profile">
-                <div class="circle">4</div>
-                <img src="https://github.com/GangadharPrathap/medical_webiste/blob/main/ramesh.jpg?raw=true" alt="DSP">
-                <ul class="mine">
-                    <li>Name: P Ramesh</li>
-                    <li>Age: 20</li>
-                    <li>Batch: FSD with React Native-1</li>
-                    <li>Address: Surampalem</li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://github.com/23p31a4263"><i class="ri-github-fill"></i></a>
-                    <a href="www.linkedin.com/in/ramesh-punyamanthula"><i class="ri-linkedin-fill"></i></a>
-                    <a href="https://www.instagram.com/23prathap09/"><i class="ri-instagram-fill"></i></a>
-                </div>
-            </div>
-            <div class="profile">
-                <div class="circle">5</div>
-                <img src="https://github.com/GangadharPrathap/medical_webiste/blob/main/venkat.jpg?raw=true"
-                    alt="Gangadhar">
-                <ul class="mine">
-                    <li>Name: Venkat Varun</li>
-                    <li>Age: 22</li>
-                    <li>Batch: FSD with React Native-1</li>
-                    <li>Address: Surampalem</li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://github.com/GangadharPrathap"><i class="ri-github-fill"></i></a>
-                    <a href="https://www.linkedin.com/in/sri-satya-gangadhara-prathap-dudala-a6a556349/"><i
-                            class="ri-linkedin-fill"></i></a>
-                    <a href="https://www.instagram.com/23prathap09/"><i class="ri-instagram-fill"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Contact  -->
-
-    <div class="etblock" id="Contact"></div>
-    <header>
-        <header>
-            <h1>Contact Us</h1>
-            <p>Have a question? Ready to get started? We’d love to hear from you.</p>
-        </header>
-
-        <div class="container">
-            <section class="contact-section">
-                <div class="contact-info">
-                    <h2>Get In Touch</h2>
-                    <p><i>📍</i> Website location: Surampalem, AP, India</p>
-                    <p><i>📞</i> +91 81790 98495</p>
-                    <p><i>✉️</i> Contact@codecures.in</p>
-                    <p><i>⏰</i> Mon - Sat: 9:00 AM to 6:00 PM</p>
-                </div>
-
-                <div class="contact-form">
-                    <h2>Send Us a Message</h2>
-                    <form>
-                        <input type="text" placeholder="Your Name" required />
-                        <input type="email" placeholder="Your Email" required />
-                        <textarea rows="5" placeholder="Your Message" required></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
-                </div>
-            </section>
-
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d88372.95799084926!2d83.26889309351348!3d17.733415378206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1snearest%20hospital%20kkd!5e1!3m2!1sen!2sin!4v1749237718869!5m2!1sen!2sin"
-                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div>
-</body>
-<!-- Footer section -->
-<style>
-
-</style>
-</head>
-
-<body>
-    <footer role="contentinfo" aria-label="Website Footer">
-        <p>© 2025 Know Your Health. All rights reserved by the CODECURES team.</p>
-        <p>Committed to advancing healthcare with trust, care, and innovation.</p>
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-10">
+        <p class="text-sm mb-2">&copy; 2025 Know Your Health. All rights reserved by the CODECURES team.</p>
+        <p class="text-xs">Committed to advancing healthcare with trust, care, and innovation.</p>
     </footer>
+
 </body>
-
-</html>
-
 
 </html>
